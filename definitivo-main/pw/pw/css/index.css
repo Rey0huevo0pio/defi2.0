@@ -1,0 +1,267 @@
+/* ------------------------------ 
+   Estilos generales del sitio 
+------------------------------ */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9c6;
+    color: black;
+}
+
+/* ------------------------------ 
+   Estilos para el encabezado 
+------------------------------ */
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
+
+header a {
+    color: rgb(45, 8, 8);
+    text-decoration: none;
+}
+
+.nav_a {
+    font-size: 6vh;
+    color: rgb(45, 8, 8);
+    font-family: "Brush Script MT", cursive;
+}
+
+/* Estilos para alinear el search-container y user-options en una fila */
+.nav-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1; /* Ajusta para ocupar el espacio disponible */
+}
+
+
+.search-container {
+    flex: 2; /* Ajusta para ocupar más espacio */
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+.search-container button:hover {
+    background-color: blue;
+}
+
+.user-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+/* estilo de las opciones del header a */
+.user-options a {
+    font-weight: bold;
+    position: relative;
+    font-size: 1.1em;
+    color: #333;
+    text-decoration: none;
+    padding: 6px 20px;
+    transition: .5s;
+}
+
+
+.user-options a:hover {
+    color: rgb(45, 8, 8);
+}
+
+.user-options a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid color black;
+    border-radius: 15px;
+    transform: scale(0) translate(6px);
+    opacity: 5;
+    transition: .5s;
+}
+
+
+
+/* ------------------------------ 
+   Estilos para el dropdown de categorías 
+------------------------------ */
+/* Estilos del dropdown */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.dropdown.open .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+}
+
+.dropdown-content ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Añadir cualquier otro estilo necesario para el resto del menú */
+
+/* ------------------------------ 
+   Estilos para el contenedor principal 
+------------------------------ */
+
+.main-container {
+    display: flex;
+    
+    width: 100%;
+}
+.main-container .Product_h2{
+    font-size: 36px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------ 
+   Estilos para la sección de bienvenida 
+------------------------------ */
+
+.bo_ti {
+    margin: .5% 10%; /* Ajustado el valor para que funcione correctamente */
+    padding: center;
+    border: #ffffff 2px solid;
+    text-align: center;
+    width: 80%; /* Puedes ajustar este valor según tus necesidades */
+    height: 200px; /* Puedes ajustar este valor según tus necesidades */
+}
+
+.bo_ti .CM_may {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.BC_may {
+    margin: 30px;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bo_ti_h2 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 45px;
+}
+
+
+/* ------------------------------ 
+   Estilos para el carrusel 
+------------------------------ */
+
+.carousel-item {
+    transition: transform .5ms ease-in-out;
+}
+
+#carouselExampleIndicators {
+    max-width: 100%;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+    max-height: 105vh;
+}
+
+/* ------------------------------ 
+   Estilos para la cuadrícula de productos 
+------------------------------ */
+
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.product {
+    width: calc(33.333% - 20px);
+}
+
+.product-info h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
